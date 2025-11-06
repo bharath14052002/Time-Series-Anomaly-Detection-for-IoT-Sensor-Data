@@ -1,32 +1,35 @@
-# Time-Series-Anomaly-Detection-for-IoT-Sensor-Data
+# Time Series Anomaly Detection for IoT Sensors
 
 A complete end-to-end machine learning solution for detecting anomalies in time series sensor data from IoT devices in manufacturing facilities.
 
-# Project Structure
-Project/
-data_generator.py              # Generate synthetic sensor data
-data_preparation.py            # Data loading, cleaning, and EDA
-feature_engineering.py         # Feature creation and normalization
-statistical_anomaly_detector.py # Statistical methods (IF, LOF, etc.)
-deep_learning_anomaly_detector.py # Neural network methods
-model_evaluation.py            # Evaluation and comparison
-main.py                        # Main execution pipeline
-requirements.txt               # Python dependencies
-README.md                      # This file
-plots/                         # Generated visualizations
-models/                        # Saved models
-results/                       # Final results
+## 📁 Project Structure
 
-# Quick Start
+```
+project/
+├── data_generator.py              # Generate synthetic sensor data
+├── data_preparation.py            # Data loading, cleaning, and EDA
+├── feature_engineering.py         # Feature creation and normalization
+├── statistical_anomaly_detector.py # Statistical methods (IF, LOF, etc.)
+├── deep_learning_anomaly_detector.py # Neural network methods
+├── model_evaluation.py            # Evaluation and comparison
+├── main.py                        # Main execution pipeline
+├── requirements.txt               # Python dependencies
+├── README.md                      # This file
+├── plots/                         # Generated visualizations
+├── models/                        # Saved models
+└── results/                       # Final results
+```
 
-# 1. Installation
+## 🚀 Quick Start
+
+### 1. Installation
 
 ```bash
 # Install required packages
 pip install -r requirements.txt
 ```
 
-# 2. Run Complete Pipeline
+### 2. Run Complete Pipeline
 
 ```bash
 # Run everything with one command
@@ -41,7 +44,7 @@ This will:
 - Evaluate and compare all models
 - Generate visualizations and reports
 
-# 3. Run Individual Components
+### 3. Run Individual Components
 
 ```bash
 # Generate data only
@@ -63,9 +66,9 @@ python deep_learning_anomaly_detector.py
 python model_evaluation.py
 ```
 
-# Anomaly Detection Methods
+## 📊 Anomaly Detection Methods
 
-# Statistical/Unsupervised Methods
+### Statistical/Unsupervised Methods
 
 1. **Isolation Forest**
    - Uses ensemble of isolation trees
@@ -87,7 +90,7 @@ python model_evaluation.py
    - Identifies points beyond threshold std deviations
    - Fast baseline method
 
-# Deep Learning Methods
+### Deep Learning Methods
 
 1. **Autoencoder**
    - Neural network that learns to reconstruct data
@@ -99,7 +102,7 @@ python model_evaluation.py
    - Learns sequential patterns
    - Best for time series with temporal correlations
 
-# Features Created
+## 📈 Features Created
 
 The pipeline creates over 100+ features including:
 
@@ -111,20 +114,20 @@ The pipeline creates over 100+ features including:
 - **Cross-Sensor Features**: Ratios, differences between sensors
 - **Time-Based Features**: Hour, day of week, cyclical encoding
 
-# Outputs
+## 📋 Outputs
 
-# Data Files
+### Data Files
 - `sensor_data.csv` - Raw sensor data with embedded anomalies
 - `sensor_data_features.csv` - Data with engineered features
 - `results/final_results.csv` - Complete results with all predictions
 
-# Models
+### Models
 - `models/statistical_models.pkl` - Statistical models
 - `models/autoencoder.h5` - Trained autoencoder
 - `models/lstm_autoencoder.h5` - Trained LSTM autoencoder
 - `models/scaler.pkl` - Feature scaler
 
-# Visualizations
+### Visualizations
 - `plots/time_series.png` - Time series for all sensors
 - `plots/distributions.png` - Value distributions
 - `plots/correlation_matrix.png` - Sensor correlations
@@ -134,12 +137,12 @@ The pipeline creates over 100+ features including:
 - `plots/pr_curves.png` - Precision-Recall curves
 - `plots/anomaly_timeline.png` - Detected anomalies in context
 
-# Reports
+### Reports
 - `evaluation_report.txt` - Detailed model comparison
 - `results/model_comparison.csv` - Metrics for all models
 - `pipeline.log` - Execution logs
 
-# Model Evaluation Metrics
+## 🎯 Model Evaluation Metrics
 
 Each model is evaluated using:
 - **Precision**: Accuracy of anomaly predictions
@@ -149,9 +152,9 @@ Each model is evaluated using:
 - **ROC-AUC**: Area under ROC curve
 - **PR-AUC**: Area under Precision-Recall curve
 
-# Configuration
+## 🔧 Configuration
 
-# Modify Data Generation
+### Modify Data Generation
 
 Edit parameters in `main.py`:
 ```python
@@ -162,7 +165,7 @@ run_pipeline(
 )
 ```
 
-# Hyperparameters
+### Hyperparameters
 
 **Isolation Forest:**
 - `n_estimators`: 100 (number of trees)
@@ -182,7 +185,7 @@ run_pipeline(
 - `timesteps`: 10
 - `encoding_dim`: 32
 
-# Code Quality Features
+## 📝 Code Quality Features
 
 - **Error Handling**: Try-catch blocks for robustness
 - **Logging**: Comprehensive logging throughout pipeline
@@ -191,7 +194,7 @@ run_pipeline(
 - **Type Hints**: Clear function signatures
 - **Reproducibility**: Random seeds for consistent results
 
-# Key Insights
+## 🎓 Key Insights
 
 1. **Feature Engineering is Critical**: Created features significantly improve detection
 2. **Ensemble Methods Work**: Combining multiple models reduces false positives
@@ -199,14 +202,14 @@ run_pipeline(
 4. **Context Matters**: LSTM helps when temporal patterns are important
 5. **Trade-offs Exist**: Balance precision vs recall based on use case
 
-# Business Recommendations
+## 🔍 Business Recommendations
 
 1. **Production Deployment**: Use ensemble of Isolation Forest + Autoencoder
 2. **Real-time Monitoring**: Isolation Forest for speed
 3. **High Accuracy Needs**: LSTM Autoencoder for complex patterns
 4. **Cost-sensitive**: Start with Z-score method, upgrade if needed
 
-# Limitations & Future Work
+## 🚧 Limitations & Future Work
 
 **Current Limitations:**
 - Synthetic data (test with real sensor data)
@@ -222,14 +225,14 @@ run_pipeline(
 - Integration with alerting systems
 - A/B testing framework
 
-# Support
+## 📞 Support
 
 For questions or issues:
 1. Check the `pipeline.log` file
 2. Review `evaluation_report.txt`
 3. Examine plots in `plots/` directory
 
-# License
+## 📄 License
 
 This project is for educational and evaluation purposes.
 
